@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import serviceWorker from './serviceWorker';
+//import serviceWorker from './serviceWorker';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,4 +11,4 @@ root.render(
   </React.StrictMode>
 );
 
-serviceWorker();
+//serviceWorker();

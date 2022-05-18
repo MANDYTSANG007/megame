@@ -2,6 +2,18 @@
     position: relative;
     min-height: 100vh;
 }
+.navbar {
+    background: red;
+    min-height: 10vh;
+    position: fixed;
+    width: 100%;
+    color: white;
+}
+
+.navbar li {
+    display: inline-block;
+    text-align: center;
+}
 
 .header {
     background-color: yellow;
