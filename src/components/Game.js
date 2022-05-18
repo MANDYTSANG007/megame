@@ -1,9 +1,16 @@
 import React from 'react';
+import Container from './Container';
+import Footer from './Footer';
+import Header from './Header';
 
 function Game(){
     return (
         <div>
-            <h1> Hello Mandy!</h1>
+            <Header />
+            <Container>
+                <h1> content </h1>
+            </Container>
+            <Footer />
         </div>
     )
 }
