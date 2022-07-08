@@ -17,7 +17,7 @@
 }
 
 .shake {
-    animation: shake 0.5s 0.0126s;
+    animation: shake .5s 0.0126s;
 }
 
 @keyframes shake {
@@ -56,11 +56,12 @@
     min-height: 80%;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 110px;
     padding-bottom: 50px;
     width: 90%;
     margin: 0 auto;
 }
+
 @media (min-width: 1100px) {
     .container {
         padding-left: 100px;
@@ -71,15 +72,44 @@
   
 .navbar {
     background: red;
-    min-height: 10vh;
-    position: fixed;
+    height: 10vh;
     width: 100%;
+    position: fixed;
     color: white;
+    box-shadow: 0 14px 28px orange, 0 10px 10px orange;
+    /* font-size: calc(10px + (24 -10) * (100vw - 320px) / (1200 - 400)); */
+    z-index: 99;
+    white-space: nowrap;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
 }
 
 .navbar li {
     display: inline-block;
     text-align: center;
+    padding: 10px 0px;
+    width: 33.3%;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: yellow;
+    font-weight: 900;
+}
+
+@media (max-width: 420px){
+    .navbar li:first-child{
+        width: 25%;
+    }
+    .navbar li:nth-child(2){
+        width: 35%;
+    }
+    .navbar li:last-child {
+        width: 40%;
+    }
 }
 
 .header {
@@ -99,10 +129,9 @@
 }
 
 .footer {
-    background: purple;
     height: 100px;
     position: relative;
-    color: white;
+    color: purple;
     overflow: auto;
 }
 
@@ -111,8 +140,74 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: purple;
+    background: yellow;
     padding: 10px;
     font-weight: 600;
     text-align: center;
+}
+
+.navbar .correct {
+    animation: .4s correct;
+}
+
+.navbar .incorrect {
+    animation: .4s incorrect;
+}
+
+.rule {
+    position: fixed;
+    background: white;
+    z-index: 1;
+    text-align: center;
+}
+
+@keyframes correct {
+    0% {
+        color: white;
+    }
+    50% {
+        color: greenyellow;
+    }
+    100% {
+        color: white;
+    }
+}
+
+@keyframes incorrect {
+    0% {
+        color: white;
+    }
+    50% {
+        color:blue;
+    }
+    100% {
+        color: white;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.1% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.blink {
+    animation: blink 1.5s linear infinite;
+}
+
+.alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -10%;
+    background: white;
+    color: red;
+    text-align: center;
+    z-index: 1;
+}
+
+.playAgainAlert {
+    width: 45%;
 }

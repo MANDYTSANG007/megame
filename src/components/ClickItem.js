@@ -1,20 +1,6 @@
 import React from 'react';
 import './style.css';
 
-
-
-// function ClickItem(props) {
-//     return (
-//         <div
-//             role='img'
-//             aria-label='click item'
-//             onClick={() => props.handleClick(props.id)}
-//             style={{ backgroundImage: `url("${props.image})` }}
-//             className={`click-item${props.shake ? "shake" : ""}`}
-//         />
-//     )
-// }
-
 class ClickItem extends React.Component {
     constructor(props) {
         super(props);
@@ -26,16 +12,15 @@ class ClickItem extends React.Component {
     render(){
         return (
             <div
-            role='img'
-            aria-label='click item'
-            onClick={() => this.handleClick(this.props.id)}     
-            // style={{ backgroundImage: `url(${this.image})` }}
-            //style={{ backgroundImage: `url(${process.env.PUBLIC_URL+'this.image'})`}}
-            // style={{ backgroundImage: "url(this.image)"}}
-            // style={{backgroundImage: `url(/assets/images/me6.png)`}}
-            style={{backgroundImage: `url(${this.props.image})`}}
-            className={`click-item${this.props.shake ? "shake" : ""}`}
-        />
+                role='img'
+                aria-label='click item'
+                onClick={() => this.props.handleClick(this.props.id)}     
+                style={{backgroundImage: `url(${this.props.image})`, 'backgroundPosition': 'top'}}
+                className={`click-item${this.shake ? "shake" : ""}`}
+                >
+                    {/* <p> Let's see what this will return to ({this.id} {this.props.id} ) </p> */}
+                </div>
+            // /> 
         );
     };
 };
