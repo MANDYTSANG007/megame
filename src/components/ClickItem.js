@@ -18,9 +18,7 @@ class ClickItem extends React.Component {
                 style={{backgroundImage: `url(${this.props.image})`, 'backgroundPosition': 'top'}}
                 className={`click-item${this.shake ? "shake" : ""}`}
                 >
-                    {/* <p> Let's see what this will return to ({this.id} {this.props.id} ) </p> */}
                 </div>
-            // /> 
         );
     };
 };

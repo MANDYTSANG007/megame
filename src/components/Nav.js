@@ -2,21 +2,6 @@ import React from 'react';
 import "./style.css";
 import ScoreMessage from "./ScoreMessage";
 
-// function Nav(props) {
-//     return (
-//         <nav className="navbar">
-//             <ul>
-//                 <li className="brandName">
-//                     <a href="/"> Megame </a>
-//                 </li>
-//                 <ScoreMessage score={props.score} topScore={props.topScore} />
-//                 <li>
-//                     Score: {props.score} &nbsp; &nbsp;|&nbsp; &nbsp; Top Score: {props.topScore}
-//                 </li>
-//             </ul>
-//         </nav>
-//     )
-// };
 function Nav(props) {
     return (
         <div className="navbar">

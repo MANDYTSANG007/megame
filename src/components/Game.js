@@ -6,6 +6,7 @@ import Footer from './Footer';
 import data from '../data.json';
 import ClickItem from './ClickItem';
 import Alert from './Alert';
+import WinningAlert from './WinningAlert';
 
 //set up class component
 //set initial state
@@ -16,11 +17,23 @@ class Game extends Component {
             data,
             score: 0,
             topScore: 0,
-            alert: false
+            alert: false,
+            winningAlert: false
         }
     }
+
     handleAlert = () => {
         this.setState({
+            winningAlert: false,
+            alert: false,
+            score: 0,
+        })
+    }
+
+    handleAlert2 = newData => {
+        this.setState({
+            data: this.resetData(newData),
+            winningAlert: true,
             alert: false,
             score: 0,
         })
@@ -48,13 +61,23 @@ class Game extends Component {
         const newScore = score + 1;
         const newTopScore = Math.max(newScore, topScore); // Syntax: Math.max(value1, value2, ...) , the output is the max among all those values.
 
+        const perfectScore = (newScore === 12 && newTopScore === 12);
+        if (perfectScore){
         this.setState({
             data: this.shuffleData(newData), //setState() enqueues changes to the component state and tells React that this component and its children need to be re-rendered with the updated state.This is the primary method you use to update the UI in response to event handlers and server responses. 
             score: newScore,
-            topScore: newTopScore
-        });
-        //console.log(this.setState.data);
-        //this.shuffleData();
+            topScore: newTopScore,
+            winningAlert: true,
+            alert: false,
+        })} else {
+            this.setState({
+                data: this.shuffleData(newData), //setState() enqueues changes to the component state and tells React that this component and its children need to be re-rendered with the updated state.This is the primary method you use to update the UI in response to event handlers and server responses. 
+                score: newScore,
+                topScore: newTopScore,
+                alert: false,
+        })};
+        console.log(this.setState.data);
+        this.shuffleData();
     };
 
     handleIncorrectGuess = newData => { //if answered incorrectly, it reset the whole data and set the score back to 0
@@ -63,7 +86,6 @@ class Game extends Component {
             score: 0,
             alert: true,
         });
-        // alert("Ooops! Try again.")
     };
 
     resetData = data => { 
@@ -82,14 +104,11 @@ class Game extends Component {
                     guessedCorrectly = true;    //now the newItem and gussedCorrectly have set it to true
                 }
             }
-            console.log("hey"); //this line run 12 times
             return newItem;
         });
         guessedCorrectly    //ternary operator: if guessedCorrectly is truthy, then go to handleCorrectGuess(using newData)
             ? this.handleCorrectGuess(newData)
             : this.handleIncorrectGuess(newData);
-
-        //data.shuffleData();
     };
 
     render() {
@@ -108,6 +127,8 @@ class Game extends Component {
                     />
                 ))}
                 {this.state.alert ? <Alert handleAlert={this.handleAlert} /> : console.log("no alert")}
+                {this.state.winningAlert ? <WinningAlert handleAlert2={this.handleAlert} /> : console.log("no alert")}
+
             </Container>
             <Footer />
         </div>
@@ -115,14 +136,3 @@ class Game extends Component {
 };
 };
 export default Game;
-
-
-//WHY IS NOT WORKING?
-//1. Score and topScore is not updating after click events [Possible: click event related to score and topScore]
-//2. Images isn't reset/relocate after clicks
-//3. Shake feature is not working
-
-//What is working?
-//1. Images reset/relocation after clicking on the brand
-//2. Images alignment is working
-//3. Correct and Incorrect message color changing features are working

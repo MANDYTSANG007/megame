@@ -14,11 +14,11 @@ class ScoreMessage extends Component {
     componentDidUpdate ({ score, topScore }, prevState) {
         const newState = { animating: true };   //create an object named newState
 
-        if (score === 0 && topScore === 0) { 
+        if (score === 0 ) { 
             newState.message = "";
         } else if (score === 0 && topScore > 0) {
             newState.message = "incorrect";
-        } else if (score === 2 && topScore === 2) {
+        } else if (score === 12) {
             newState.message = "win";
         } else {
             newState.message = "correct";
@@ -57,6 +57,3 @@ class ScoreMessage extends Component {
 };
 
 export default ScoreMessage;
-
-
-//  the ScoreMessage part doesn't have any issue. 

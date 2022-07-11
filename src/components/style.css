@@ -50,8 +50,6 @@
 }
 
 .container {
-    /* position: relative;
-    min-height: 100vh; */
     display: flex;
     min-height: 80%;
     flex-wrap: wrap;
