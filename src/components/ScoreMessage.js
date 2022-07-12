@@ -44,14 +44,14 @@ class ScoreMessage extends Component {
 
     render() {
         return (
-            <li
+            <div
                 className={this.state.animating 
                 ? this.state.message
                 : ""}
                 onAnimationEnd={() => this.setState({animating: false })}
             >
                 {this.renderMessage()}
-            </li>
+            </div>
         )
     };
 };

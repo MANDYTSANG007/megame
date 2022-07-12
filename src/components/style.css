@@ -1,11 +1,15 @@
 .click-item {
     background-size: cover;
     background-position: center;
+    height: 170px;
+    width: 170px;
     margin: 8px 25px;
     border: 5px solid yellow;
     border-radius: 3px;
     box-shadow: 0 3px 6px gray, 0 3px 6px black;
     cursor: pointer;
+    object-fit: cover;
+    object-position: top;
 }
 
 .click-item:hover {
@@ -68,7 +72,7 @@
   
 .navbar {
     background: red;
-    height: 10vh;
+    height: 80px;
     width: 100%;
     position: fixed;
     color: white;
