@@ -146,6 +146,13 @@
     text-align: center;
 }
 
+.github-link {
+    color: purple;
+}
+
+.github-link:hover {
+    color: brown;
+}
 .navbar .correct {
     animation: .4s correct;
 }
