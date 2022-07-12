@@ -14,7 +14,7 @@ import './style.css';
                 <div>
                     <img 
                         style={{height: "170px", width: "150px"}}
-                        src={`${this.props.image}`}
+                        src={process.env.PUBLIC_URL+`${this.props.image}`}
                         onClick={() => this.props.handleClick(this.props.id)}
                         aria-label='click item'
                         role='img'
