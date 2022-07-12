@@ -8,7 +8,7 @@ function Alert(props) {
     <div className="btn btn-danger replay" onClick={props.handleAlert}> OK </div><br/><br/><br/>
 
     <div>
-      <img className='playAgainAlert' src='/assets/images/haha.gif' alt='laughing' />
+      <img className='playAgainAlert' src={process.env.PUBLIC_URL + '/assets/images/haha.gif'} alt='laughing' />
     </div>
   </div>;
 }

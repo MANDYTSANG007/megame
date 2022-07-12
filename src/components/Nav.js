@@ -5,7 +5,7 @@ import ScoreMessage from "./ScoreMessage";
 function Nav(props) {
     return (
         <div className="navbar">
-            <a className='navbar-brand' href="/"> Megame </a>
+            <a className='navbar-brand' href="/"> Megame </a> 
             <ul className='nav navbar-nav'>
                 <li className='active'>
                     <ScoreMessage score={props.score} topScore={props.topScore} />

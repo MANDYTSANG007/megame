@@ -7,7 +7,7 @@ function WinningAlert(props) {
     <br/><br/><br/><br/><h1> Yay~ You Win! </h1>
     <div className="btn btn-danger replay" onClick={props.handleAlert2}> START </div><br/><br/><br/>
     <div>
-      <img className='playAgainAlert' src='/assets/images/celebrations.gif' alt='celebrations' />
+      <img className='playAgainAlert' src={process.env.PUBLIC_URL + '/assets/images/celebrations.gif'} alt='celebrations' />
     </div>
   </div>;
 }
