@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/megame/static/css/main.618339a6.css",
-    "main.js": "/megame/static/js/main.d61e21bd.js",
+    "main.css": "/megame/static/css/main.0fde7c0d.css",
+    "main.js": "/megame/static/js/main.452cf11c.js",
     "index.html": "/megame/index.html",
-    "main.618339a6.css.map": "/megame/static/css/main.618339a6.css.map",
-    "main.d61e21bd.js.map": "/megame/static/js/main.d61e21bd.js.map"
+    "main.0fde7c0d.css.map": "/megame/static/css/main.0fde7c0d.css.map",
+    "main.452cf11c.js.map": "/megame/static/js/main.452cf11c.js.map"
   },
   "entrypoints": [
-    "static/css/main.618339a6.css",
-    "static/js/main.d61e21bd.js"
+    "static/css/main.0fde7c0d.css",
+    "static/js/main.452cf11c.js"
   ]
 }
