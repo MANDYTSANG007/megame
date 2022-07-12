@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/megame/static/css/main.3ba25064.css",
+    "main.js": "/megame/static/js/main.f9f825f2.js",
+    "index.html": "/megame/index.html",
+    "main.3ba25064.css.map": "/megame/static/css/main.3ba25064.css.map",
+    "main.f9f825f2.js.map": "/megame/static/js/main.f9f825f2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ba25064.css",
+    "static/js/main.f9f825f2.js"
+  ]
+}
