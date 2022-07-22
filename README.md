@@ -23,7 +23,7 @@ MeGame is an interactive memory game using React. Player earns points by clickin
 
 coming soon!
 
-## Authors
+## Author
 
 **Mandy Tsang** 
 
