@@ -19,15 +19,11 @@ MeGame is an interactive memory game using React. Player earns points by clickin
 * [Node.JS](https://nodejs.org/en/)
 
 
-## Design Layout
-
-coming soon!
-
 ## Author
 
 **Mandy Tsang** 
 
-- [Portfolio](https://mandytsang007.github.io/new-portfolio/)
+- [Portfolio](https://mandytsang007.github.io/mt-portfolio/)
 - [Github](https://github.com/MANDYTSANG007)
 
 
