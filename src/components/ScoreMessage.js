@@ -38,7 +38,7 @@ class ScoreMessage extends Component {
             case "win":
                 return "You Win!"
             default:
-                return "Click an image to begin.";
+                return "Click an image to begin. Hint: Don't click the same image more than once.";
         }
     };
 
