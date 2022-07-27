@@ -71,7 +71,7 @@
 }
   
 .navbar {
-    background: red;
+    background: rgb(1, 82, 1);
     height: 80px;
     width: 100%;
     position: fixed;
@@ -131,7 +131,7 @@
 .footer {
     height: 100px;
     position: relative;
-    color: purple;
+    color: white;
     overflow: auto;
 }
 
@@ -140,14 +140,14 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: yellow;
+    background: rgb(1, 82, 1);
     padding: 10px;
     font-weight: 600;
     text-align: center;
 }
 
 .github-link {
-    color: purple;
+    color: white;
 }
 
 .github-link:hover {
