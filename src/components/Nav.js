@@ -4,7 +4,8 @@ import ScoreMessage from "./ScoreMessage";
 
 function Nav(props) {
     return (
-        <div className="navbar">
+        <div className="navbar" style={{backgroundImage:"url(/assets/images/banana1.png)"}}>
+
             <a className='navbar-brand' href="/"> Megame </a> 
             <ul className='nav navbar-nav'>
                 <li className='active'>
